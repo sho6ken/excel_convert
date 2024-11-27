@@ -4,7 +4,7 @@ using System.Data;
 using System.IO;
 using Excel;
 
-namespace mohist.excel {
+namespace mohism.excel {
     /// <summary>
     /// 解析整表
     /// </summary>

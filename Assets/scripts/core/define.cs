@@ -1,4 +1,4 @@
-namespace mohist.excel {
+namespace mohism.excel {
     /// <summary>
     /// 定義
     /// </summary>

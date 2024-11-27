@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace mohist.excel {
+namespace mohism.excel {
     /// <summary>
     /// 解析單欄
     /// </summary>

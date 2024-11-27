@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using LitJson;
 
-namespace mohist.excel.exporter {
+namespace mohism.excel.exporter {
     /// <summary>
     /// json輸出器
     /// </summary>

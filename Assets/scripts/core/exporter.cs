@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace mohist.excel {
+namespace mohism.excel {
     /// <summary>
     /// 資料輸出器
     /// </summary>

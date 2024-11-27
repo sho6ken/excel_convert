@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using mohist.excel.exporter;
+using mohism.excel.exporter;
 using UnityEditor;
 using UnityEngine;
 
-namespace mohist.excel.editor {
+namespace mohism.excel.editor {
     /// <summary>
     /// excel轉檔工具
     /// </summary>
@@ -29,12 +29,23 @@ namespace mohist.excel.editor {
         private static string _dest = string.Empty;
 
         /// <summary>
+        /// 紀錄本地輸出目錄
+        /// </summary>
+        private const string DEST_KEY = "dest";
+
+        /// <summary>
         /// 顯示視窗
         /// </summary>
         [MenuItem("Assets/表格轉檔")]
         private static void ShowForm() {
             _inst = GetWindow<ExcelTool>();
-            _dest = Application.dataPath;
+
+            if (PlayerPrefs.HasKey(DEST_KEY)) {
+                _dest = PlayerPrefs.GetString(DEST_KEY);
+            }
+            else {
+                _dest = Application.dataPath;
+            }
 
             load();
 
@@ -72,7 +83,8 @@ namespace mohist.excel.editor {
 
             // 修改輸出路徑
             if (GUILayout.Button("修改輸出路徑")) {
-                _dest = EditorUtility.OpenFolderPanel("選擇輸出路徑", Application.dataPath, "");
+                _dest = EditorUtility.OpenFolderPanel("選擇輸出路徑", _dest, "");
+                PlayerPrefs.SetString(DEST_KEY, _dest);
             }
 
             // 繪製文件列表
