@@ -1,4 +1,4 @@
-namespace mohist.excel.exporter {
+namespace mohism.excel.exporter {
     /// <summary>
     /// 輸出json文件
     /// </summary>

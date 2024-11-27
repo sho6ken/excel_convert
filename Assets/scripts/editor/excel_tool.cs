@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using mohist.excel.exporter;
+using mohism.excel.exporter;
 using UnityEditor;
 using UnityEngine;
 
-namespace mohist.excel.editor {
+namespace mohism.excel.editor {
     /// <summary>
     /// excel轉檔工具
     /// </summary>
